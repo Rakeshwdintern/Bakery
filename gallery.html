@@ -1,0 +1,311 @@
+<html>
+
+<head>
+
+    <title> Clekha</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        jQuery(document).ready(function ($) {
+
+            $('#myCarousel').carousel({
+                interval: 5000
+            });
+
+            //Handles the carousel thumbnails
+            $('[id^=carousel-selector-]').click(function () {
+                var id_selector = $(this).attr("id");
+                try {
+                    var id = /-(\d+)$/.exec(id_selector)[1];
+                    console.log(id_selector, id);
+                    jQuery('#myCarousel').carousel(parseInt(id));
+                } catch (e) {
+                    console.log('Regex failed!', e);
+                }
+            });
+            // When the carousel slides, auto update the text
+            $('#myCarousel').on('slid.bs.carousel', function (e) {
+                var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-' + id).html());
+            });
+        });
+    </script>
+
+    <style>
+        .hide-bullets {
+            list-style: none;
+            margin-left: -40px;
+            margin-top: 20px;
+        }
+
+        .thumbnail {
+            padding: 0;
+        }
+
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div id="header" class="container-fluid text-white" style=" width:100%;background-color: red;">
+            <div id="row">
+                <div class="col-sm-2 text-white" id="nav-item"><a href="index.html">Home</a> </div>
+                <div class="col-sm-2 text-white" id="nav-item"><a href="about.html">About us</a> </div>
+                <div class="col-sm-2 text-white" id="nav-item"><a href="gallery.html">Gallery</a> </div>
+                <div class="navbar-brand text-white" href="#">
+                    <a style="font-family: Great vibes; text-shadow: 7px 3px 13px black; font-size: 48px; ">
+                        Clekha</a>
+                </div>
+
+                <div class="col-sm-2 text-white" id="nav-item"><a href="products.html">Products</a> </div>
+                <div class="col-sm-2 text-white" id="nav-item"><a href="#">Sign in</a> </div>
+                <div class="col-sm-2 text-white" id="nav-item"><a href="contact.html">Contact us</a> </div>
+                <div id="select"><i class="fa-bars" data-toggle="collapse" data-target="#demo"> </i> </div>
+
+
+
+            </div>
+        </div>
+    </header>
+
+    <div id="demo" class="panel-collapse collapse">
+        <ul class="list-group">
+            <li class="list-group-item">Home</a></li>
+            <li class="list-group-item">About us</a></li>
+            <li class="list-group-item">Gallery</a></li>
+            <li class="list-group-item">Products</a></li>
+            <li class="list-group-item">Contact us</a></li>
+
+        </ul>
+        <div class="panel-footer">Footer</div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div id="main_area">
+            <!-- Slider -->
+            <div class="row">
+                <div class="col-sm-6" id="slider-thumbs">
+                    <!-- Bottom switcher of slider -->
+                    <ul class="hide-bullets">
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-0">
+                                <img
+                                    src="https://www.wearegurgaon.com/wp-content/uploads/2019/02/paul-bakery-cafe-ambience-mall-gurgaon-2.jpg">
+                            </a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-1"><img
+                                    src="https://cdn.pixabay.com/photo/2014/04/05/11/27/bread-315690_960_720.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-2"><img
+                                    src="https://cdn.restos.in/images/restaurants/5b02a6271d41c821274205a8/qzVZD5.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-3"><img src="https://agoodfoodmoodcom.files.wordpress.com/2019/03/img_20181118_190501_439.jpg></a>
+                        </li>
+
+                        <li class=" col-sm-3">
+                                <a class="thumbnail" id="carousel-selector-4"><img
+                                        src="https://nowlucknow.com/wp-content/uploads/2019/11/GB3.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-5"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2_3QfnO5DKbJW4MrAxYSmA1SXGKsHcgZ_Wpx4EdtcP_LwJX_&s"></a>
+                        </li>
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-6"><img
+                                    src="https://i.pinimg.com/originals/19/23/6e/19236ea1740489c358a4f45598542373.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-7"><img
+                                    src="https://gumlet.assettype.com/knocksense/2019-01/5a6ef42e-aee2-4c9d-aeb7-638b715c6ffc/yamuna_cafe.PNG?w=1200&h=846"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-8"><img
+                                    src="https://res.cloudinary.com/purnesh/image/upload/f_auto/v1544176602/5th-av-1.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-9"><img
+                                    src="http://kalingagrand.com/wp-content/uploads/2017/07/bakenbrew3.jpg"></a>
+                        </li>
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-10"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIYnCqhlUwaIfjYKhMsTaMUMO-UgQuD9oixyNX9w4zRze6LjSW&s"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-11"><img
+                                    src="http://kalingagrand.com/wp-content/uploads/2017/07/bakenbrew1.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-12"><img
+                                    src="https://www.foodfindsasia.com/wp-content/uploads/2015/05/bake-n-brew-cafe-paranaque.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-13"><img
+                                    src="https://media-cdn.tripadvisor.com/media/photo-s/12/69/69/a4/interiors-and-seating.jpg"></a>
+                        </li>
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-14"><img
+                                    src="https://media-cdn.tripadvisor.com/media/photo-s/12/b1/73/9c/loveselfie-20170313-203542.jpg"></a>
+                        </li>
+
+                        <li class="col-sm-3">
+                            <a class="thumbnail" id="carousel-selector-15"><img
+                                    src="https://content.jdmagicbox.com/comp/guwahati/d3/9999px361.x361.170121145050.l7d3/catalogue/brewbakes-six-mile-guwahati-restaurants-32umulm.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <div class="col-xs-12" id="slider">
+                        <!-- Top part of the slider -->
+                        <div class="row">
+                            <div class="col-sm-12" id="carousel-bounding-box">
+                                <div class="carousel slide" id="myCarousel">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item" data-slide-number="0">
+                                            <img
+                                                src="https://content.jdmagicbox.com/comp/guwahati/d3/9999px361.x361.170121145050.l7d3/catalogue/brewbakes-six-mile-guwahati-restaurants-32umulm.jpg">
+                                        </div>
+
+                                        <div class="item" data-slide-number="1">
+                                            <img
+                                                src="https://media-cdn.tripadvisor.com/media/photo-s/12/b1/73/9c/loveselfie-20170313-203542.jpg">
+                                        </div>
+
+                                        <div class="item" data-slide-number="2">
+                                            <img
+                                                src="https://media-cdn.tripadvisor.com/media/photo-s/12/69/69/a4/interiors-and-seating.jpg">
+                                        </div>
+
+                                        <div class="item" data-slide-number="3">
+                                            <img
+                                                src="https://www.foodfindsasia.com/wp-content/uploads/2015/05/bake-n-brew-cafe-paranaque.jpg">
+                                        </div>
+
+                                        <div class="item" data-slide-number="4">
+                                            <img
+                                                src="http://kalingagrand.com/wp-content/uploads/2017/07/bakenbrew1.jpg">
+                                        </div>
+
+                                        <div class="item" data-slide-number="5">
+                                            <img
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIYnCqhlUwaIfjYKhMsTaMUMO-UgQuD9oixyNX9w4zRze6LjSW&s">
+                                        </div>
+
+                                        <div class="item" data-slide-number="6">
+                                            <img
+                                                src="http://kalingagrand.com/wp-content/uploads/2017/07/bakenbrew3.jpg">
+                                        </div>
+
+                                        <div class="item" data-slide-number="7">
+                                            <img src="http://placehold.it/470x480&text=7"></div>
+
+                                        <div class="item" data-slide-number="8">
+                                            <img src="http://placehold.it/470x480&text=8"></div>
+
+                                        <div class="item" data-slide-number="9">
+                                            <img src="http://placehold.it/470x480&text=9"></div>
+
+                                        <div class="item" data-slide-number="10">
+                                            <img src="http://placehold.it/470x480&text=10"></div>
+
+                                        <div class="item" data-slide-number="11">
+                                            <img src="http://placehold.it/470x480&text=11"></div>
+
+                                        <div class="item" data-slide-number="12">
+                                            <img src="http://placehold.it/470x480&text=12"></div>
+
+                                        <div class="item" data-slide-number="13">
+                                            <img src="http://placehold.it/470x480&text=13"></div>
+
+                                        <div class="item" data-slide-number="14">
+                                            <img src="http://placehold.it/470x480&text=14"></div>
+
+                                        <div class="item" data-slide-number="15">
+                                            <img src="http://placehold.it/470x480&text=15"></div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" role="button"
+                                        data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Slider-->
+
+    <footer>
+        <div class="container-fluid" id="foo" style="background-color: red">
+            <div class="row">
+                <div class="col-sm-6 md-6 lg-6 text-white " id="foo1-1" style="padding-left: 10px;    margin-top: 20px">
+                    <p style="color:white">Visit us at:<br>
+                        Clekhabakers@yourbakery.com</p>
+                </div>
+                <div id="foo1" class="col-sm-6 md-6 lg-6 text-white">
+                    <address>
+                        <p style="color: white;">23rd street Lt.street<br>
+                            Hayath nagar,Hyderabad</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="background-color: red">
+            <div class="row">
+                <div class="col-sm-6 md-6 lg-6">
+                    <div id="" class="col-sm-6 text-white">
+                        <a id="foo-i" href="#" style="width: fit-content;" class="fa fa-facebook"></a>
+                        <a id="foo-i" href="#" style="width: fit-content;" class="fa fa-twitter" id="icons"></a>
+                        <a id="foo-i" href="#" style="width: fit-content;" class="fa fa-instagram" id="icons"></a>
+                        <a id="foo-i" href="#" style="width: fit-content;" class="fa fa-snapchat" id="icons"></a>
+                        <a id="foo-i" href="#" style="width: fit-content;" class="fa fa-google" id="icons"></a>
+                    </div>
+                </div>
+                <div id="foo2" class="col-sm-6 md-6 lg-6 text-white">
+                    <p style="color: white; "> Clekha Bakery &copy 2019</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </footer>
+
+</body>

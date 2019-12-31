@@ -1,0 +1,140 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+#select{
+
+    display: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+    /* box-shadow: inset -1px -1px 0px 0px black; */
+}
+
+
+.col-sm-2 {
+    width: 12.66666667%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.responsive {
+    height: 95vh;
+    width: 98vw;
+       padding-right: 0px;
+    padding-left: 0px;
+    margin-left: -10px;
+    margin-right:0px;
+}
+#bs{
+
+    box-shadow: 3px 3px 2px 0px whitesmoke;
+}
+#bs-wr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+#firstimg{
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+/* ------------Responsive-------------------------*/
+@media screen and (min-width: 320px)
+and (max-width: 479px) {
+    .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+     #nav-item{
+        display: none;
+            }
+    
+    
+    #bs{
+            padding-bottom: 40px;
+    margin-bottom: 40px;
+    }
+    
+    article{
+        padding-right: 10px;
+    padding-left: 20px;
+    }
+    #select{
+        display:block;
+        float: right;
+    }
+    #select i{
+        color: aliceblue;
+        font-size: xx-large;
+    }
+    #f2{
+        margin-right: 20vw;
+    margin-top: 20px;
+    width: 80vw;
+    margin-left: -20px;
+    }
+    .responsive{
+        width: 100vw;
+    margin-left: -15px;
+}
+#firstimg {
+    margin-top: 10rem;
+    padding-left: 0px;
+    width: 80vw;
+    margin: 40px;
+    padding-bottom: 0px;
+}
+#greet{
+    margin-right: -80px;
+}
+#products{
+    width:80vw;
+    margin-left: -10px;
+}
+#social{
+    margin-left: -15px;
+}
+#foo-i{
+    margin-left:-15px;
+    padding: 20px;
+}
+#foo1-2{
+    margin-left: -5px;
+}
+
+}
+@media screen and(min-width: 480px) and (max-width:1080px){
+    #demo{
+        display:none;
+    }
+}
+/* footers----------------------------------------*/
+#foo1 p {
+    margin: 20px 20px 20px;
+}
+ .col-sm-1 {
+    width:0px;
+}
